@@ -1,0 +1,297 @@
+{
+  "app": {
+    "title": "TicketFlow",
+    "cart": "Mein Warenkorb",
+    "myTickets": "Meine Tickets",
+    "favorites": "Meine Favoriten",
+    "adminPanel": "Admin-Bereich",
+    "logout": "Abmelden",
+    "loading": "Wird geladen..."
+  },
+  "search": {
+    "allCities": "Alle Städte",
+    "allEvents": "Alle Veranstaltungen",
+    "button": "Suchen"
+  },
+  "pagination": {
+    "prev": "← Zurück",
+    "next": "Weiter →",
+    "page": "Seite {{current}} / {{total}}"
+  },
+  "promo": {
+    "title": "NEUJAHRSANGEBOT!",
+    "desc1": "Ein ",
+    "desc2": "20% RABATT",
+    "desc3": " auf alle Events erwartet dich.",
+    "hint": "Vergiss nicht, diesen Code an der Kasse zu verwenden!",
+    "btn": "Gutschein einlösen & profitieren"
+  },
+  "eventList": {
+    "notFound": "Veranstaltung nicht gefunden.",
+    "stars": " Stars der Woche",
+    "forYou": " Für Dich",
+    "eventsTitle": "Veranstaltungen",
+    "sortLabel": "Sortieren nach:",
+    "sortUpcoming": " Kommende Events",
+    "sortNewest": " Neu hinzugefügt",
+    "sortPopular": " Beliebt (Bestseller)",
+    "goBtn": "Los",
+    "inspectBtn": "Ansehen"
+  },
+  "cartPage": {
+    "empty": "Dein Warenkorb ist leer ",
+    "backToEvents": " Zurück zu Events",
+    "seats": "Sitzplätze:",
+    "qty": "Menge:",
+    "coupon": "Gutschein:",
+    "delete": "Löschen",
+    "summaryTitle": "Bestellübersicht",
+    "total": "Gesamt:",
+    "checkoutBtn": "Zur Kasse"
+  },
+  "myTicketsPage": {
+    "purchased": "Gekauft",
+    "user": "Benutzer:",
+    "quantity": "Stück",
+    "totalPaid": "Insgesamt bezahlt",
+    "cancelBtn": "Ticket stornieren",
+    "searching": "Tickets werden gesucht...",
+    "empty": "Du hast noch keine Tickets gekauft.",
+    "goSelect": "Jetzt ein Event auswählen!",
+    "perPiece": "Pro Stück:",
+    "ticketId": "Ticket #",
+    "noEventInfo": "Keine Event-Info"
+  },
+  "favoritesPage": {
+    "title": "❤️ Meine Lieblings-Events",
+    "emptyTitle": "Noch keine Favoriten ",
+    "emptyDesc": "Durchsuche Events und klicke auf das Herz, um sie hier hinzuzufügen!"
+  },
+  "profilePage": {
+    "title": "👤 Mein Profil",
+    "changePassword": "Passwort ändern",
+    "currentPassword": "Aktuelles Passwort",
+    "newPassword": "Neues Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "updateBtn": "Passwort aktualisieren",
+    "updatingBtn": "Wird aktualisiert..."
+  },
+  "common": {
+    "back": "← Zurück"
+  },
+  "auth": {
+    "loginTitle": "Anmelden",
+    "registerTitle": "Registrieren",
+    "username": "Benutzername",
+    "password": "Passwort",
+    "rememberMe": "Eingeloggt bleiben",
+    "loginBtn": "Anmelden",
+    "registerBtn": "Registrieren",
+    "noAccount": "Noch kein Konto?",
+    "haveAccount": "Bereits ein Konto?"
+  },
+  "eventDetail": {
+    "backToList": "← Zurück zur Liste",
+    "price": "Preis",
+    "remaining": "ÜBRIG",
+    "sold24h": "{{count}} Tickets in 24h verkauft",
+    "noDesc": "Keine Beschreibung verfügbar.",
+    "venue": "Ort:",
+    "date": "Datum:",
+    "stageSelection": "Bühne / Platzauswahl",
+    "stage": "B Ü H N E",
+    "empty": "Frei",
+    "selected": "Ausgewählt",
+    "reserved": "Reserviert",
+    "full": "Belegt",
+    "ticketPrice": "Ticketpreis",
+    "apply": "Anwenden",
+    "selectedCount": "Ausgewählt:",
+    "total": "Gesamt:",
+    "addToCart": "In den Warenkorb",
+    "buyNow": "Jetzt Kaufen",
+    "couponSuccess": " Großartig! 20% Neujahrsrabatt angewendet!",
+    "couponError": " Ungültiger Gutscheincode!",
+    "selectSeatWarning": "Bitte wählen Sie mindestens einen Platz auf der Karte! 💺",
+    "maxSeatWarning": "Sie können maximal 6 Tickets in den Warenkorb legen.",
+    "cartSuccess": " Tickets zum Warenkorb hinzugefügt!",
+    "purchaseSuccess": " {{count}} Tickets erfolgreich gekauft!",
+    "purchaseError": "Kauf fehlgeschlagen.",
+    "justSold": "⚠️ Gerade wurden {{count}} weitere Tickets verkauft!",
+    "couponPlaceholder": "Gutscheincode (Bsp: YILBASI)"
+  },
+  "admin": {
+    "title": "Admin-Bereich",
+    "exit": "← Verlassen",
+    "tabs": {
+      "list": "Liste",
+      "addNew": "Neu Hinzufügen",
+      "reports": "Berichte",
+      "tickets": "Tickets",
+      "users": "Benutzer"
+    },
+    "list": {
+      "id": "ID",
+      "title": "Titel",
+      "city": "Stadt",
+      "date": "Datum",
+      "price": "Preis",
+      "actions": "Aktionen"
+    },
+    "add": {
+      "title": "Neues Event hinzufügen",
+      "phTitle": "Bsp: Tarkan Konzert",
+      "phCity": "Bsp: Istanbul",
+      "phVenue": "Bsp: Harbiye Open Air",
+      "posterUrl": "Poster-Bild (URL)",
+      "capacity": "Kapazität",
+      "pcs": "Stk",
+      "createBtn": "Erstellen und Veröffentlichen",      
+      "editTitle": "Event bearbeiten",
+      "name": "Event-Name",
+      "desc": "Event-Beschreibung",
+      "phDesc": "Event-Regeln, Altersgrenzen und Details hier eingeben...",
+      "city": "Stadt", 
+      "venue": "Veranstaltungsort", 
+      "date": "Datum",
+      "type": "Typ",
+      "posterHint": "Wenn leer gelassen, zufällig zugewiesen",  
+      "price": "Preis", 
+      "updateBtn": "Aktualisieren",
+      "saving": "Wird erstellt, bitte warten...",
+      "types": {
+    "concert": "Konzert",
+    "theatre": "Theater",
+    "cinema": "Kino",
+    "sport": "Sport"
+  }
+    },
+    "reports": {
+      "filters": "BERICHTSFILTER",
+      "startDate": "Startdatum",
+      "endDate": "Enddatum",
+      "filterBtn": "Filtern",
+      "chartTitle": "Event-Verkaufsleistung",
+      "stockLeft": "Restbestand",
+      "totalSales": "Gesamtverkauf",
+      "periodRev": "Perioden-Umsatz",
+      "periodSales": "Perioden-Verkauf",
+      "reportEvents": "Events im Bericht",
+      "dlExcel": "Excel Herunterladen",
+      "dlPdf": "PDF Herunterladen",
+      "eventName": "Event-Name",
+      "periodInc": "Perioden-Einkommen",
+      "allTime": "Gesamte Zeit",
+      "allTimeInc": "Gesamteinnahmen"
+    },
+    "tickets": {
+      "title": "Alle verkauften Tickets",
+      "event": "Event",
+      "user": "Benutzer",
+      "qty": "Menge",
+      "cancelBtn": "Stornieren"
+    },
+    "users": {
+      "title": "Registrierte Benutzer",
+      "email": "E-Mail",
+      "role": "Rolle",
+      "historyBtn": "Verlauf",
+      "historyModalTitle": "Ticket-Verlauf",
+      "processDate": "Bearbeitungsdatum"
+    },
+    "seatMap": {
+    "loading": "Sitzplätze werden geladen...",
+    "reserveError": "Platz konnte nicht reserviert werden! Vielleicht schon vergeben.",
+    "timeLimit": "Verbleibende Reservierungszeit: "
+  }
+},
+  "errors": {
+    "rateLimit": "Zu viele Anfragen! Bitte warten Sie eine Minute."
+  
+  },"seatMap": {
+  "leftTribune": "LINKE TRIBÜNE",
+  "centerBlock": "MITTLERER BLOCK (BÜHNENNÄHE)",
+  "rightTribune": "RECHTE TRIBÜNE",
+  "exitFoyer": "AUSGANG / FOYER",
+  "corridor": "GANG",
+  "entranceEmergency": "EINGANG / NOTAUSGANG"
+},
+"paymentModal": {
+  "title": "Sichere Zahlung",
+  "cardNamePlaceholder": "VORNAME NACHNAME",
+  "expiryLabel": "GÜLTIG",
+  "cardNumber": "Kartennummer (16 Ziffern)",
+  "nameOnCard": "Name auf der Karte",
+  "month": "Monat",
+  "year": "Jahr",
+  "cvc": "CVC",
+  "payAndFinish": "{{amount}} bezahlen und abschließen",
+  "validationWarning": "Bitte füllen Sie alle Kartendaten vollständig aus!"
+  
+},
+"footer": {
+  "status": "Serverstatus",
+  "statusTooltip": "Alle Systeme betriebsbereit"
+},
+"toasts": {
+    "welcome": "👋 Willkommen {{username}}",
+    "registerSuccess": "✅ Registrierung erfolgreich! Sie können sich jetzt anmelden.",
+    "eventUpdated": "✅ Erfolgreich aktualisiert!",
+    "eventCreated": "✅ Erfolgreich erstellt!",
+    "eventDeleted": "🗑️ Gelöscht.",
+    "deleteError": "Konnte nicht gelöscht werden.",
+    "ticketCancelled": "✅ Ticket storniert.",
+    "ticketCancelError": "Ticket konnte nicht storniert werden.",
+    "paymentSuccess": "🎉 Zahlung erfolgreich! Viel Spaß.",
+    "cartSuccess": "🛒 Tickets zum Warenkorb hinzugefügt!",
+    "couponSuccess": "🎉 Großartig! 20% Neujahrsrabatt angewendet!",
+    "couponError": "❌ Ungültiger Gutscheincode!",
+    "maxCouponTickets": "Mit einem Rabattgutschein können Sie maximal 2 Tickets kaufen!",
+    "selectSeatWarning": "Bitte wählen Sie mindestens einen Platz auf der Karte! 🎟️",
+    "maxSeatWarning": "Sie können maximal 6 Tickets in den Warenkorb legen.",
+    "favAdded": "Zu Favoriten hinzugefügt ❤️",
+    "favRemoved": "Aus Favoriten entfernt 💔",
+    "favError": "Vorgang fehlgeschlagen (Sind Sie angemeldet?)",
+    "passwordMismatch": "Neue Passwörter stimmen nicht überein!",
+    "passwordChanged": "✅ Passwort erfolgreich geändert!",
+    "passwordError": "Passwort konnte nicht geändert werden.",
+    "reportFiltered": "Bericht gefiltert.",
+    "filterCleared": "Filter zurückgesetzt.",
+    "reportError": "Berichtsdaten konnten nicht abgerufen werden.",
+    "downloadSuccess": "{{type}} heruntergeladen.",
+    "downloadError": "Download fehlgeschlagen.",
+    "pdfPreparing": "PDF wird vorbereitet, bitte warten...",
+    "paymentError": "Fehler bei der Zahlung: {{msg}}",
+    "unknownError": "Unbekannter Fehler",
+    "ticketsLoadError": "Beim Laden Ihrer Tickets ist ein Problem aufgetreten.",
+    "eventNotFound": "Veranstaltung nicht gefunden.",
+    "eventDetailError": "Event-Details konnten nicht geladen werden.",
+    "rateLimitWait": "Zu viele Anfragen! Bitte warten Sie {{seconds}} Sekunden. ⏳",
+    "rateLimitSlowDown": "Du bist zu schnell, mach etwas langsamer! Bitte {{seconds}} Sekunden warten. ⏳",
+    "serverUnreachable": "Server nicht erreichbar oder ein unbekannter Fehler ist aufgetreten.",
+    "invalidCredentials": "Benutzername oder Passwort falsch.",
+    "unexpectedError": "Ein unerwarteter Fehler ist aufgetreten.",
+    "confirmAction": "Sind Sie sicher, dass Sie fortfahren möchten?"
+  },
+  "successModal": {
+    "title": "Herzlichen Glückwunsch! Ihr Ticket ist bereit",
+    "desc": "Ihre Reservierung wurde bestätigt und Ihr digitales Ticket mit QR-Code erstellt.",
+    "ticketNo": "Ticket-Nr: #{{id}}",
+    "success": "Erfolgreich",
+    "hint": "Sie können diesen QR-Code direkt am Einlass der Veranstaltung scannen lassen.",
+    "downloadPdf": "QR-Ticket herunterladen",
+    "continueShopping": "← Weiter einkaufen"
+  },
+  "modals": {
+    "analysisTitle": "Event-Analyse",
+    "totalRevenue": "GESAMTUMSATZ",
+    "soldTickets": "VERKAUFTE TICKETS",
+    "remainingSeats": "RESTLICHE PLÄTZE",
+    "occupancy": "Auslastung: %{{rate}}",
+    "noData": "Keine Daten gefunden.",
+    "close": "Schließen",
+    "userHistoryTitle": "{{username}} - Ticket-Verlauf",
+    "userNoTickets": "Dieser Benutzer hat noch keine Tickets.",
+    "deletedEvent": "Gelöschtes Event"
+  }
+}

@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* =========================================
+   1. TICKETFLOW RENK PALETİ VE TEMEL
+   ========================================= */
+:root {
+  --bg-main: #0a0f1d;        /* Derin Gece Mavisi Zemin */
+  --bg-card: #111827;        /* Kartlar ve Paneller */
+  --border-subtle: #1f2937;  /* Çerçeve Çizgileri */
+  --brand-blue: #2563eb;     /* TicketFlow Ana Mavisi */
+  --brand-hover: #1d4ed8;
+}
+
+body {
+ 
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  color: #f3f4f6 !important;
+  min-height: 100vh;
+  letter-spacing: -0.01em;
+
+  /* Tepe merkezden vuran zarif kobalt ışıması ve derin gece tabanı */
+  background-color: #080d1a !important;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(37, 99, 235, 0.22), transparent 70%),
+    radial-gradient(ellipse 60% 30% at 50% 100%, rgba(6, 182, 212, 0.08), transparent 70%) !important;
+  background-attachment: fixed;
+
+}
+
+/* =========================================
+   2. BOOTSTRAP'IN ESKİ GRİLERİNİ EZME (OVERRIDE)
+   ========================================= */
+/* .bg-dark ve card sınıflarını Bootstrap'ın !important zorlamasından kurtarıyoruz */
+.bg-dark, 
+.card.bg-dark,
+.modal-content.bg-dark {
+  background-color: var(--bg-card) !important;
+}
+
+.border-secondary {
+  border-color: var(--border-subtle) !important;
+}
+
+/* =========================================
+   KART HOVER VE İSTİSNALAR
+   ========================================= */
+
+/* 1. Normal Etkinlik Kartları (Hover kalkışı devam eder) */
+.card {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 12px !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.35) !important;
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* 2. Arama Çubuğu ve Form Kartlarını Hover Etkisinden Muaf Tutma */
+.card:has(input),
+.card:has(.form-control),
+.card:has(.form-select),
+.card:has(.seat-row-line),
+.card:has(.v-wing-left)  {
+  transform: none !important;
+  transition: none !important;
+}
+
+.card:has(input):hover,
+.card:has(.form-control):hover,
+.card:has(.form-select):hover,
+.card:has(.seat-row-line):hover,
+.card:has(.v-wing-left):hover {
+  transform: none !important;
+  border-color: var(--border-subtle) !important;
+  box-shadow: none !important;
+}
+
+/* Butonları Modernleştirme */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--brand-blue) !important;
+  border-color: var(--brand-blue) !important;
+  color: #ffffff !important; /* 👈 İncele ve Ara yazısını net beyaz yapar */
+  font-weight: 700 !important;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-hover) !important;
+}
+
+/* =========================================
+   3. MEVCUT ANİMASYONUN VE V-AMFİ STİLLERİ
+   ========================================= */
+@keyframes flashAlert {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.blink-infinite {
+  animation: flashAlert 1s infinite ease-in-out !important; 
+  border: 2px solid white; 
+}
+
+/* Sol ve Sağ Kanat V-Açıları */
+.v-wing-left {
+  transform: rotate(8deg);
+  transform-origin: right center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.v-wing-right {
+  transform: rotate(-8deg);
+  transform-origin: left center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.v-center-block {
+  background: rgba(37, 99, 235, 0.04);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+}
+
+.vertical-aisle {
+  width: 24px;
+}
+
+.horizontal-walkway {
+  width: 82%;
+  max-width: 680px;
+  background: linear-gradient(90deg, rgba(30, 41, 59, 0.2) 0%, rgba(30, 41, 59, 0.9) 50%, rgba(30, 41, 59, 0.2) 100%);
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+}
+/* =========================================
+   KONTRAST VE OKUNURLUK DÜZELTMELERİ
+   ========================================= */
+
+/* 1. Kart Başlıkları ve Tüm Metinleri Görünür Yapma */
+.card-title, 
+.card h5, 
+.card h6,
+.card strong {
+  color: #f8fafc !important; /* Net Açık Beyaz */
+  font-weight: 700 !important;
+}
+
+.card-text, 
+.card p, 
+.card span:not(.badge) {
+  color: #cbd5e1 !important; /* Açık Gri */
+}
+.card .badge.bg-warning,
+.badge.bg-warning {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+/* Bootstrap'ın okunmayan koyu gri text-muted sınıfını açık griye çeviriyoruz */
+.text-muted {
+  color: #94a3b8 !important;
+}
+
+/* Fiyat Yazıları Belirginleşsin */
+.card h6.fw-bold,
+.card [class*="price"] {
+  color: #38bdf8 !important;
+}
+
+/* Kart içindeki tüm birincil butonların yazısını tebeşir beyazı yap */
+.card .btn-primary,
+.card .btn-primary * {
+  color: #ffffff !important;
+}
+/* 2. Arama Çubuğu, Select ve Form Elemanları */
+.form-control,
+.form-select {
+  background-color: #1e293b !important;
+  border: 1px solid #334155 !important;
+  color: #f8fafc !important;
+  border-radius: 8px !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #1e293b !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25) !important;
+  color: #ffffff !important;
+}
+
+/* Input Placeholder (Etkinlik ara... yazısı) */
+.form-control::placeholder {
+  color: #64748b !important;
+}
+
+/* Dropdown seçeneklerinin arka planı */
+.form-select option {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+}
+.form-label {
+  color: #e2e8f0 !important; 
+  font-weight: 600 !important;
+  font-size: 0.88rem !important;
+  margin-bottom: 6px !important;
+}
+
+/* 3. Navbar Butonlarını Sadeleştirme */
+.navbar .btn-outline-warning,
+.navbar .btn-outline-danger,
+.navbar .btn-outline-info,
+.navbar .btn-outline-primary {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #e2e8f0 !important;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.navbar .btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+}
+
+/* Çıkış Butonuna Hafif Kırmızı Dokunuş */
+.navbar .btn-outline-danger {
+  color: #f87171 !important;
+  border-color: rgba(239, 68, 68, 0.3) !important;
+}
+
+
+/* 4. Etkinlik Görsellerinin Düzgün Durması */
+.card img {
+  object-fit: cover;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+}
+
+.navbar .btn {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #e2e8f0 !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  padding: 6px 12px !important;
+}
+
+.navbar .btn:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Sadece Çıkış Butonuna Zarif Kırmızı Detay */
+.navbar .btn-outline-danger {
+  color: #f87171 !important;
+  border-color: rgba(239, 68, 68, 0.3) !important;
+}
+
+/* 2. Kart Kalp Butonunu Modernleştirme (Glassmorphism) */
+.card button:has(svg), 
+.card [class*="favorite"],
+.card .rounded-circle {
+  background: rgba(15, 23, 42, 0.65) !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+/* 3. Görseli Olmayan Kartlara Otomatik Şık Gradient Zemin */
+.card-img-top,
+.card img {
+  min-height: 180px;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  object-fit: cover;
+}
+
+/* 4. Arama Çubuğu Solundaki Büyüteç Butonu/Kutusu */
+.input-group-text {
+  background-color: #1e293b !important;
+  border: 1px solid #334155 !important;
+  border-right: none !important;
+  color: #94a3b8 !important;
+}
+.form-select {
+  min-width: 190px !important;
+}
+
+.badge.bg-secondary,
+.badge-secondary {
+  background-color: rgba(56, 189, 248, 0.12) !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(56, 189, 248, 0.28) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.3px;
+  padding: 4px 8px !important;
+  border-radius: 6px !important;
+}
+
+/* Yan mini kart hover efekti */
+.mini-event-card:hover {
+  background-color: rgba(30, 41, 59, 0.9) !important;
+  border-color: rgba(56, 189, 248, 0.4) !important;
+  transform: translateX(3px);
+}

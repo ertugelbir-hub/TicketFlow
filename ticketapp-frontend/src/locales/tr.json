@@ -1,0 +1,298 @@
+{
+  "app": {
+    "title": "TicketFlow",
+    "cart": "Sepetim",
+    "myTickets": "Biletlerim",
+    "favorites": "Favorilerim",
+    "adminPanel": "Yönetici Paneli",
+    "logout": "Çıkış",
+    "loading": "Yükleniyor..."
+  },
+  "search": {
+    "allCities": "Tüm Şehirler",
+    "allEvents": "Tüm Etkinlikler",
+    "button": "Ara"
+  },
+  "pagination": {
+    "prev": "← Önceki",
+    "next": "Sonraki →",
+    "page": "Sayfa {{current}} / {{total}}"
+  },
+  "promo": {
+    "title": "YILBAŞI FIRSATI!",
+    "desc1": "Tüm etkinliklerde geçerli ",
+    "desc2": "%20 İNDİRİM",
+    "desc3": " seni bekliyor.",
+    "hint": "Ödeme ekranında bu kodu kullanmayı unutma!",
+    "btn": "Kuponunu Kullan ve Avantajlarından Yararlan 🚀"
+  },
+  "eventList": {
+    "notFound": "Etkinlik bulunamadı.",
+    "stars": " Haftanın Yıldızları",
+    "forYou": " Sizin İçin",
+    "eventsTitle": "Etkinlikler",
+    "sortLabel": "Sırala:",
+    "sortUpcoming": " Yaklaşan Etkinlikler",
+    "sortNewest": "Sisteme Son Eklenenler",
+    "sortPopular": "Popüler (Çok Satanlar)",
+    "goBtn": "Git",
+    "inspectBtn": "İncele"
+  },
+  "cartPage": {
+    "empty": "Sepetin boş ",
+    "backToEvents": "Etkinliklere Dön",
+    "seats": "Koltuklar:",
+    "qty": "Adet:",
+    "coupon": "Kupon:",
+    "delete": "Sil",
+    "summaryTitle": "Sipariş Özeti",
+    "total": "Toplam:",
+    "checkoutBtn": "Ödemeye Geç"
+  },
+  "myTicketsPage": {
+    "purchased": "Satın Alındı",
+    "user": "Kullanıcı:",
+    "quantity": "Adet",
+    "totalPaid": "Toplam Ödenen",
+    "cancelBtn": "Bileti İptal Et (İade)",
+    "searching": "Biletler aranıyor...",
+    "empty": "Henüz hiç bilet almamışsın.",
+    "goSelect": "Hemen Bir Etkinlik Seç!",
+    "perPiece": "Tanesi:",
+    "ticketId": "Bilet #",
+    "noEventInfo": "Etkinlik Bilgisi Yok"
+  },
+  "favoritesPage": {
+    "title": "❤️ Favori Etkinliklerim",
+    "emptyTitle": "Henüz favori etkinliğin yok 🤷‍♂️",
+    "emptyDesc": "Etkinliklere göz atıp beğendiklerini kalp butonuna basarak buraya ekleyebilirsin!"
+  },
+  "profilePage": {
+    "title": "👤 Profilim",
+    "changePassword": "Şifre Değiştir",
+    "currentPassword": "Mevcut Şifre",
+    "newPassword": "Yeni Şifre",
+    "confirmPassword": "Şifre Tekrar",
+    "updateBtn": "Şifreyi Güncelle",
+    "updatingBtn": "Güncelleniyor..."
+  },
+  "common": {
+    "back": "← Geri"
+  },
+  "auth": {
+    "loginTitle": "Giriş Yap",
+    "registerTitle": "Kayıt Ol",
+    "username": "Kullanıcı Adı",
+    "password": "Şifre",
+    "rememberMe": "Beni Hatırla",
+    "loginBtn": "Giriş Yap",
+    "registerBtn": "Kayıt Ol",
+    "noAccount": "Hesabın yok mu?",
+    "haveAccount": "Zaten hesabın var mı?"
+  },
+  "eventDetail": {
+    "backToList": "← Listeye Dön",
+    "price": "Fiyat",
+    "remaining": "KALAN",
+    "sold24h": "Son 24 saatte {{count}} bilet satıldı",
+    "noDesc": "Açıklama bulunmuyor.",
+    "venue": "Mekan:",
+    "date": "Tarih:",
+    "stageSelection": "Sahne / Koltuk Seçimi",
+    "stage": "S A H N E",
+    "empty": "Boş",
+    "selected": "Seçili",
+    "reserved": "Rezerve",
+    "full": "Dolu",
+    "ticketPrice": "Bilet Fiyatı",
+    "apply": "Uygula",
+    "selectedCount": "Seçilen:",
+    "total": "Toplam:",
+    "addToCart": "Sepete Ekle",
+    "buyNow": "Hızlı Satın Al",
+    "couponSuccess": "Harika! %20 Yılbaşı İndirimi Uygulandı!",
+    "couponError": "Geçersiz Kupon Kodu!",
+    "selectSeatWarning": "Lütfen haritadan en az bir koltuk seçin! 💺",
+    "maxSeatWarning": "En fazla 6 bilet sepete ekleyebilirsin.",
+    "cartSuccess": "Biletler sepete eklendi!",
+    "purchaseSuccess": "🎉 {{count}} adet bilet başarıyla alındı!",
+    "purchaseError": "Satın alma işlemi başarısız oldu.",
+    "justSold": "⚠️ Az önce {{count}} bilet daha satıldı!",
+    "couponPlaceholder": "Kupon Kodu (Örn: YILBASI)"
+  },
+  "admin": {
+    "title": "Yönetici Paneli",
+    "exit": "← Çıkış",
+    "tabs": {
+      "list": "Liste",
+      "addNew": "Yeni Ekle",
+      "reports": "Raporlar",
+      "tickets": "Biletler",
+      "users": "Üyeler"
+    },
+    "list": {
+      "id": "ID",
+      "title": "Başlık",
+      "city": "Şehir",
+      "date": "Tarih",
+      "price": "Fiyat",
+      "actions": "İşlemler"
+    },
+    "add": {
+      "title": "Yeni Etkinlik Ekle",
+      "phTitle": "Örn: Tarkan Konseri",
+      "phCity": "Örn: İstanbul",
+      "phVenue": "Örn: Harbiye Açık Hava",
+      "posterUrl": "Afiş Resmi (URL)",
+      "capacity": "Kapasite",
+      "pcs": "Adet",
+      "createBtn": "Oluştur ve Yayınla",
+      "editTitle": "Etkinliği Düzenle",
+      "name": "Etkinlik Adı",
+      "desc": "Etkinlik Açıklaması",
+      "phDesc": "Etkinlik kuralları, yaş sınırı ve detayları buraya yazınız...",
+      "city": "Şehir",
+      "venue": "Mekan",
+      "date": "Tarih",
+      "type": "Tür",
+      "posterHint": "Boş bırakırsan rastgele atanır",
+      "price": "Fiyat",
+      "updateBtn": "Güncelle",
+      "saving": "Oluşturuluyor, lütfen bekleyin...",
+      "types": {"concert": "Konser",
+      "theatre": "Tiyatro",
+      "cinema": "Sinema",
+      "sport": "Spor"
+      }
+      
+      
+    },
+    "reports": {
+      "filters": "RAPOR FİLTRELERİ",
+      "startDate": "Başlangıç Tarihi",
+      "endDate": "Bitiş Tarihi",
+      "filterBtn": "Filtrele",
+      "chartTitle": "Etkinlik Satış Performansı",
+      "stockLeft": "Kalan Stok",
+      "totalSales": "Toplam Satış",
+      "periodRev": "Dönem Cirosu",
+      "periodSales": "Dönem Satışı",
+      "reportEvents": "Rapordaki Etkinlik",
+      "dlExcel": "Excel (CSV) İndir",
+      "dlPdf": "PDF İndir",
+      "eventName": "Etkinlik Adı",
+      "periodInc": "Dönem Geliri",
+      "allTime": "Tüm Zaman",
+      "allTimeInc": "Tüm Zaman Geliri"
+    },
+    "tickets": {
+      "title": "Satılan Tüm Biletler",
+      "event": "Etkinlik",
+      "user": "Kullanıcı",
+      "qty": "Adet",
+      "cancelBtn": "İptal Et"
+    },
+    "users": {
+      "title": "Kayıtlı Üyeler",
+      "email": "Email",
+      "role": "Rol",
+      "historyBtn": "Geçmiş",
+      "historyModalTitle": "Bilet Geçmişi",
+      "processDate": "İşlem Tarihi"
+    },
+    "seatMap": {
+    "loading": "Koltuklar yükleniyor...",
+    "reserveError": "Koltuk rezerve edilemedi! Başkası kapmış olabilir.",
+    "timeLimit": "Rezervasyon süreniz: "
+  }
+},
+  "errors": {
+    "rateLimit": "Aga çok hızlısın, biraz yavaşla! Lütfen 1 dakika bekle."
+    },
+    "seatMap": {
+  "leftTribune": "SOL TRİBÜN",
+  "centerBlock": "ORTA BLOK (SAHNE ÖNÜ)",
+  "rightTribune": "SAĞ TRİBÜN",
+  "exitFoyer": "ÇIKIŞ / FUAYE",
+  "corridor": "KORİDOR",
+  "entranceEmergency": "GİRİŞ / ACİL ÇIKIŞ"
+},
+  "paymentModal": {
+  "title": "Güvenli Ödeme",
+  "cardNamePlaceholder": "ADINIZ SOYADINIZ",
+  "expiryLabel": "SKT",
+  "cardNumber": "Kart Numarası (16 Hane)",
+  "nameOnCard": "Kart Üzerindeki İsim",
+  "month": "Ay",
+  "year": "Yıl",
+  "cvc": "CVC",
+  "payAndFinish": "{{amount}} Öde ve Bitir",
+  "validationWarning": "Lütfen tüm kart bilgilerini eksiksiz doldurun!"
+},
+"footer": {
+  "status": "Sunucu Durumu",
+  "statusTooltip": "Tüm servisler aktif"
+},
+"toasts": {
+    "welcome": "👋 Hoşgeldin {{username}}",
+    "registerSuccess": "✅ Kayıt başarılı! Şimdi giriş yapabilirsin.",
+    "eventUpdated": "✅ Güncelleme başarılı!",
+    "eventCreated": "✅ Kayıt başarılı!",
+    "eventDeleted": "🗑️ Silindi.",
+    "deleteError": "Silinemedi.",
+    "ticketCancelled": "✅ Bilet iptal edildi.",
+    "ticketCancelError": "Bilet iptal edilemedi.",
+    "paymentSuccess": "🎉 Ödeme başarılı! İyi eğlenceler.",
+    "cartSuccess": "🛒 Biletler sepete eklendi!",
+    "couponSuccess": "🎉 Harika! %20 Yılbaşı İndirimi Uygulandı!",
+    "couponError": "❌ Geçersiz Kupon Kodu!",
+    "maxCouponTickets": "İndirim kuponu ile en fazla 2 bilet alabilirsiniz!",
+    "selectSeatWarning": "Lütfen haritadan en az bir koltuk seçin! 🎟️",
+    "maxSeatWarning": "En fazla 6 bilet sepete ekleyebilirsin.",
+    "favAdded": "Favorilere eklendi ❤️",
+    "favRemoved": "Favorilerden çıkarıldı 💔",
+    "favError": "İşlem başarısız (Giriş yaptınız mı?)",
+    "passwordMismatch": "Yeni şifreler uyuşmuyor!",
+    "passwordChanged": "✅ Şifreniz başarıyla değiştirildi!",
+    "passwordError": "Şifre değiştirilemedi.",
+    "reportFiltered": "Rapor filtrelendi.",
+    "filterCleared": "Filtre temizlendi.",
+    "reportError": "Rapor verileri alınamadı.",
+    "downloadSuccess": "{{type}} indirildi.",
+    "downloadError": "İndirme başarısız.",
+    "pdfPreparing": "PDF hazırlanıyor, lütfen bekleyin...",
+    "paymentError": "Ödeme sırasında bir hata oluştu: {{msg}}",
+    "unknownError": "Bilinmeyen hata",
+    "ticketsLoadError": "Biletlerin yüklenirken bir sorun oluştu.",
+    "eventNotFound": "Etkinlik bulunamadı.",
+    "eventDetailError": "Etkinlik detayına ulaşılamadı.",
+    "rateLimitWait": "Çok fazla istek gönderdiniz! Lütfen {{seconds}} saniye bekleyin. ⏳",
+    "rateLimitSlowDown": "Aga çok hızlısın, biraz yavaşla! Lütfen {{seconds}} saniye bekle. ⏳",
+    "serverUnreachable": "Sunucuya erişilemiyor veya bilinmeyen bir hata oluştu.",
+    "invalidCredentials": "Kullanıcı adı veya şifre hatalı.",
+    "unexpectedError": "Beklenmedik bir hata oluştu.",
+    "confirmAction": "Bu işlemi yapmak istediğine emin misin?"
+    
+  },
+  "successModal": {
+    "title": "Tebrikler! Biletiniz Hazır",
+    "desc": "Rezervasyonunuz onaylandı ve dijital biletiniz QR kodunuzla birlikte üretildi.",
+    "ticketNo": "Bilet Kayıt No: #{{id}}",
+    "success": "İşlem Başarılı",
+    "hint": "Etkinlik girişinde bu QR kodunu okutarak doğrudan geçiş yapabilirsiniz.",
+    "downloadPdf": "QR Kodlu Biletini İndir",
+    "continueShopping": "← Alışverişe Devam Et"
+  },
+  "modals": {
+    "analysisTitle": "Etkinlik Analizi",
+    "totalRevenue": "TOPLAM CİRO",
+    "soldTickets": "SATILAN BİLET",
+    "remainingSeats": "KALAN KOLTUK",
+    "occupancy": "Doluluk: %{{rate}}",
+    "noData": "Veri bulunamadı.",
+    "close": "Kapat",
+    "userHistoryTitle": "{{username}} - Bilet Geçmişi",
+    "userNoTickets": "Bu kullanıcının hiç bileti yok.",
+    "deletedEvent": "Silinmiş Etkinlik"
+  }
+}

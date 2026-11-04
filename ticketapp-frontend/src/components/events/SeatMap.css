@@ -1,0 +1,46 @@
+/* =========================================
+   V-AMFİ VE YATAY KORİDOR TASARIMI
+   ========================================= */
+
+/* Sol Kanat: Sahneye doğru V şeklinde kıvrılma (\) */
+.v-wing-left {
+  transform: rotate(8deg);
+  transform-origin: right center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+/* Sağ Kanat: Sahneye doğru V şeklinde kıvrılma (/) */
+.v-wing-right {
+  transform: rotate(-8deg);
+  transform-origin: left center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+/* Orta Sahne Önü Bloğu (_) */
+.v-center-block {
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Dikey Yürüme Boşlukları */
+.vertical-aisle {
+  width: 24px;
+  height: 100%;
+}
+
+/* Yatay Yürüyüş Koridoru (Parter ve Tribün Ayrımı) */
+.horizontal-walkway {
+  width: 82%;
+  max-width: 680px;
+  background: linear-gradient(90deg, rgba(30, 41, 59, 0.2) 0%, rgba(30, 41, 59, 0.9) 50%, rgba(30, 41, 59, 0.2) 100%);
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+  letter-spacing: 1.5px;
+}

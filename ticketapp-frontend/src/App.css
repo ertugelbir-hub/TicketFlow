@@ -1,0 +1,115 @@
+/* Sidebar + main layout */
+.app-root {
+  min-height: 100vh;
+  background-color: var(--bg-main, #f6f7fb);
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 260px;                /* sabit genişlik */
+  min-height: 100vh;
+  background: #2b2f33;        /* koyu arka plan */
+  color: #fff;
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar iç elemanları */
+.sidebar .logo {
+  font-size: 28px;
+}
+.sidebar .title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Main content */
+.app-main {
+  background: #f4f5f7;
+}
+
+/* Kartların hafif görünümü */
+.card {
+  border-radius: 8px;
+}
+
+/* Responsive: mobilde sidebar daralt */
+@media (max-width: 767.98px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+  }
+  .app-root {
+    flex-direction: column;
+  }
+  /* Stok değiştiğinde yanıp sönme efekti */
+@keyframes flashRed {
+  0% { background-color: transparent; color: white; }
+  50% { background-color: rgba(220, 53, 69, 0.8); color: white; transform: scale(1.1); }
+  100% { background-color: transparent; color: white; transform: scale(1); }
+}
+
+.stock-flash {
+  animation: flashRed 0.5s ease-in-out;
+  border-radius: 4px;
+  padding: 0 5px;
+  display: inline-block;
+}
+}
+@keyframes pulseRed {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes softPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+  }
+  70% {
+    transform: scale(1.02); /* Çok az büyüsün */
+    box-shadow: 0 0 10px 10px rgba(220, 53, 69, 0); /* Gölge yayılarak kaybolsun */
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+  }
+}
+
+.blink-infinite {
+  animation: softPulse 2s infinite !important; /* 2 saniyede bir, daha yavaş */
+  border: 1px solid rgba(255,255,255,0.5); 
+  font-weight: bold;
+  display: inline-block;
+}
+/* --- RESİM DÜZENLEMELERİ --- */
+
+/* Liste Sayfası (Kartlar) İçin */
+.card-img-top-custom {
+  width: 100%;
+  height: 220px; /* Sabit yükseklik */
+  object-fit: cover; /* Resmi sündürmeden kutuyu doldur */
+  object-position: top center; /* Resmin üst tarafına odaklan (kafalar kesilmesin) */
+  transition: transform 0.3s ease;
+}
+
+/* Detay Sayfası (Banner) İçin */
+.event-detail-banner {
+  width: 100%;
+  height: 400px; /* Banner yüksekliği */
+  object-fit: cover; /* Kutuyu tam doldur */
+  object-position: center center; /* Ortadan biraz yukarıya odaklan */
+  display: block;
+  border-radius: 12px; /* Köşeleri yuvarla */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Hafif gölge */
+}
+
+/* Kartın üzerine gelince resim hafif büyüsün (Hoş bir efekt) */
+.card:hover .card-img-top-custom {
+  transform: scale(1.05);
+}

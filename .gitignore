@@ -1,0 +1,10 @@
+**/node_modules/
+**/dist/
+**/target/
+**/*.jar
+
+.idea/
+.vscode/
+*.log
+.DS_Store
+Thumbs.db
