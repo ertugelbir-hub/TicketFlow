@@ -190,6 +190,7 @@ public class EventService {
         int seatsCreated = 0;
         int rowIndex = 0;
         // Kapasite dolana kadar sıra üret
+        List<Seat> seatsToSave = new ArrayList<>(totalSeats);
         while (seatsCreated < totalSeats) {
             // Sıra adını hesaplama: A..Z bittiğinde 2A..2Z, 3A..3Z formatına geçer
             int tier = (rowIndex / 26) + 1;
@@ -199,11 +200,11 @@ public class EventService {
             for (int number = 1; number <= seatsPerRow; number++) {
                 if (seatsCreated >= totalSeats) break;
 
-                Seat seat = new Seat(rowName, number, event);
-                seatRepo.save(seat);
+                seatsToSave.add(new Seat(rowName, number, event));                
                 seatsCreated++;
             }
             rowIndex++;
         }
+        seatRepo.saveAll(seatsToSave);
     }
 }
