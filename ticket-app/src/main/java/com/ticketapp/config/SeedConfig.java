@@ -144,62 +144,98 @@ public class SeedConfig {
                 List<String> mockUsers = List.of("ayse", "ahmet");
 
                 for (Event event : allEvents) {
-                    // Her etkinlik için 2 ile 4 arasında rastgele sayıda satın alma işlemi simüle et
-                    int purchaseCount = 2 + random.nextInt(3);
-                    for (int i = 0; i < purchaseCount; i++) {
-                        String randomUser = mockUsers.get(random.nextInt(mockUsers.size()));
-                        int randomSeatCount = 1 + random.nextInt(5); // 1 ile 5 arası rastgele koltuk adedi
-                        assignRandomTicket(event, randomUser, randomSeatCount, seatRepo, ticketRepo);
+                    // 500'den büyükse %20 gişe satışı yap
+                    if (event.getTotalSeats() > 500) {
+                        assignBoxOfficeSeats(event, seatRepo, ticketRepo);
+                    } else {
+                        // 500 ve altıysa mevcut Ayşe ve Ahmet bilet dağıtımı aynen çalışsın
+                        int purchaseCount = 2 + random.nextInt(3);
+                        for (int i = 0; i < purchaseCount; i++) {
+                            String randomUser = mockUsers.get(random.nextInt(mockUsers.size()));
+                            int randomSeatCount = 1 + random.nextInt(5);
+                            assignRandomTicket(event, randomUser, randomSeatCount, seatRepo, ticketRepo);
+                        }
                     }
                 }
             }
 
         };
     }
-              private EventRequest createReq(String title, String city, String venue, String type,
+    private EventRequest createReq(String title, String city, String venue, String type,
                                    String desc, LocalDateTime dateTime, int seats,
                                    BigDecimal price, String img) {
-                  EventRequest req = new EventRequest();
-                  req.setTitle(title);
-                  req.setCity(city);
-                  req.setVenue(venue);
-                  req.setType(type);
-                  req.setDescription(desc);
-                  req.setDateTime(dateTime);
-                  req.setTotalSeats(seats);
-                  req.setPrice(price);
-                  req.setImageUrl(img);
-                  return req;
-              }
-                // Rastgele Konumlardan Koltuk Seçip Bilet Oluşturan Yardımcı Metot
-                  private void assignRandomTicket(Event event, String username, int count,
-                  SeatRepository seatRepo, TicketRepository ticketRepo) {
-                      // Etkinliğin boş koltuklarını bul
-                      List<Seat> emptySeats = new ArrayList<>(
-                              seatRepo.findByEventIdOrderByIdAsc(event.getId()).stream()
-                                      .filter(s -> !s.isSold())
-                                      .toList()
-                      );
+        EventRequest req = new EventRequest();
+        req.setTitle(title);
+        req.setCity(city);
+        req.setVenue(venue);
+        req.setType(type);
+        req.setDescription(desc);
+        req.setDateTime(dateTime);
+        req.setTotalSeats(seats);
+        req.setPrice(price);
+        req.setImageUrl(img);
+        return req;
+    }
+    // Rastgele Konumlardan Koltuk Seçip Bilet Oluşturan Yardımcı Metot
+    private void assignRandomTicket(Event event, String username, int count,
+                                    SeatRepository seatRepo, TicketRepository ticketRepo) {
+        // Etkinliğin boş koltuklarını bul
+        List<Seat> emptySeats = new ArrayList<>(
+                seatRepo.findByEventIdOrderByIdAsc(event.getId()).stream()
+                        .filter(s -> !s.isSold())
+                        .toList()
+        );
 
-                      if (emptySeats.isEmpty()) return;
+        if (emptySeats.isEmpty()) return;
 
-                      // Koltukları rastgele karıştır
-                      Collections.shuffle(emptySeats, random);
+        // Koltukları rastgele karıştır
+        Collections.shuffle(emptySeats, random);
 
-                      int takeCount = Math.min(count, emptySeats.size());
-                      List<Seat> selectedSeats = emptySeats.subList(0, takeCount);
+        int takeCount = Math.min(count, emptySeats.size());
+        List<Seat> selectedSeats = emptySeats.subList(0, takeCount);
 
-                      // Seçilen koltukları dolu yap
-                      selectedSeats.forEach(s -> s.setSold(true));
-                      seatRepo.saveAll(selectedSeats);
+        // Seçilen koltukları dolu yap
+        selectedSeats.forEach(s -> s.setSold(true));
+        seatRepo.saveAll(selectedSeats);
 
-                      // Bileti oluştur (Son 1-36 saat içinde alınmış gibi gerçekçi tarih ver)
-                      Ticket ticket = new Ticket();
-                      ticket.setEvent(event);
-                      ticket.setUsername(username);
-                      ticket.setQuantity(takeCount);
-                      ticket.setPrice(event.getPrice());
-                      ticket.setCreatedAt(LocalDateTime.now().minusHours(1 + random.nextInt(36)));
-                      ticketRepo.save(ticket);
-                  }
-              }
+        // Bileti oluştur (Son 1-36 saat içinde alınmış gibi gerçekçi tarih ver)
+        Ticket ticket = new Ticket();
+        ticket.setEvent(event);
+        ticket.setUsername(username);
+        ticket.setQuantity(takeCount);
+        ticket.setPrice(event.getPrice());
+        ticket.setCreatedAt(LocalDateTime.now().minusHours(1 + random.nextInt(36)));
+        ticketRepo.save(ticket);
+    }
+    // 500'den büyük etkinliklerde %20 koltuğu gişe satışı olarak kapatan metot
+    private void assignBoxOfficeSeats(Event event, SeatRepository seatRepo, TicketRepository ticketRepo) {
+        List<Seat> emptySeats = new ArrayList<>(
+                seatRepo.findByEventIdOrderByIdAsc(event.getId()).stream()
+                        .filter(s -> !s.isSold())
+                        .toList()
+        );
+
+        if (emptySeats.isEmpty()) return;
+
+        Collections.shuffle(emptySeats, random);
+
+        // Kapasitenin tam %20'si (800 koltukta 160 koltuk seçilir)
+        int targetSeats = (int) Math.round(event.getTotalSeats() * 0.20);
+        targetSeats = Math.min(targetSeats, emptySeats.size());
+        if (targetSeats <= 0) return;
+
+        // Seçilen koltukları dolu yap ve tek seferde kaydet
+        List<Seat> seatsToSell = emptySeats.subList(0, targetSeats);
+        seatsToSell.forEach(s -> s.setSold(true));
+        seatRepo.saveAll(seatsToSell);
+
+        // Gişe satışı olarak tek bilet kaydet (Ayşe/Ahmet'in ekranına düşmez, admin raporları tam tutar)
+        Ticket ticket = new Ticket();
+        ticket.setEvent(event);
+        ticket.setUsername("gise_satisi");
+        ticket.setQuantity(targetSeats);
+        ticket.setPrice(event.getPrice());
+        ticket.setCreatedAt(LocalDateTime.now().minusHours(12));
+        ticketRepo.save(ticket);
+    }
+}
